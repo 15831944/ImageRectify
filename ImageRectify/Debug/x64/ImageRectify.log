@@ -1,0 +1,58 @@
+﻿  main.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
+  c:\program files (x86)\microsoft visual studio 14.0\vc\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
+  _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+e:\2_learning\4_code\imagerectify\imagerectify\matrix.h(15): warning C4005: 'FALSE': macro redefinition
+  c:\program files (x86)\microsoft visual studio 14.0\vc\atlmfc\include\afx.h(272): note: see previous definition of 'FALSE'
+e:\2_learning\4_code\imagerectify\imagerectify\matrix.h(16): warning C4005: 'TRUE': macro redefinition
+  c:\program files (x86)\microsoft visual studio 14.0\vc\atlmfc\include\afx.h(273): note: see previous definition of 'TRUE'
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(46): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(47): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(51): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(99): warning C4800: 'BOOL': forcing value to bool 'true' or 'false' (performance warning)
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(102): warning C4800: 'BOOL': forcing value to bool 'true' or 'false' (performance warning)
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(94): warning C4390: ';': empty controlled statement found; is this the intent?
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(248): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(308): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(309): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(317): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(318): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(319): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(320): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(327): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(338): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(344): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(350): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(451): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(452): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(487): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'CString'
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(535): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(536): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(571): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'CString'
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(648): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(706): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(707): warning C4477: 'fprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'CString'
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(708): warning C4477: 'fprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'CString'
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(722): warning C4477: 'fprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'ATL::CStringT<char,StrTraitMFC_DLL<char,ATL::ChTraitsCRT<_CharType>>>'
+          with
+          [
+              _CharType=char
+          ]
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(722): warning C4477: 'fprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 6 has type 'ATL::CStringT<char,StrTraitMFC_DLL<char,ATL::ChTraitsCRT<_CharType>>>'
+          with
+          [
+              _CharType=char
+          ]
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(735): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(791): warning C4068: unknown pragma
+e:\2_learning\4_code\imagerectify\imagerectify\main.cpp(145): warning C4715: 'FunSearchFile': not all control paths return a value
+     Creating library E:\2_Learning\4_Code\ImageRectify\lib\Debug\x64\ImageRectify.lib and object E:\2_Learning\4_Code\ImageRectify\lib\Debug\x64\ImageRectify.exp
+  ImageRectify.vcxproj -> E:\2_Learning\4_Code\ImageRectify\Bin\Debug\x64\ImageRectify.exe
+  ImageRectify.vcxproj -> E:\2_Learning\4_Code\ImageRectify\Bin\Debug\x64\ImageRectify.pdb (Full PDB)

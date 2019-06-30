@@ -538,6 +538,7 @@ void imageRectify(CString strOri, CString strRes, cameraInfo pos, double resolut
 	Point3D p3 = Img2XYZ(nCols, nRows, Point2D(nCols, 0), z, posSide);
 	Point3D p4 = Img2XYZ(nCols, nRows, Point2D(0, nRows), z, posSide);
 
+
 	double max_x = max(max(p1.X, p2.X), max(p3.X, p4.X));
 	double min_x = min(min(p1.X, p2.X), min(p3.X, p4.X));
 	double max_y = max(max(p1.Y, p2.Y), max(p3.Y, p4.Y));
@@ -559,6 +560,7 @@ void imageRectify(CString strOri, CString strRes, cameraInfo pos, double resolut
 			{
 				continue;
 			}
+			ptImg2Side.x = nCols- ptImg2Side.x;
 			int r, g, b;
 			getImgGray(data, nBands, nCols, nRows, ptImg2Side, r, g, b);
 			if (nBands2 == 1)
@@ -574,13 +576,13 @@ void imageRectify(CString strOri, CString strRes, cameraInfo pos, double resolut
 				}
 		}
 	}
-	double geo[6];
-	geo[0] = min_x;
-	geo[1] = resolution;
-	geo[2] = 0;
-	geo[3] = min_y + (nRows2 - 1)*resolution;
-	geo[4] = 0;
-	geo[5] = -resolution;
+	double geo[6] = { 0 };
+	//geo[0] = min_x;
+	//geo[1] = resolution;
+	//geo[2] = 0;
+	//geo[3] = min_y + (nRows2 - 1)*resolution;
+	//geo[4] = 0;
+	//geo[5] = -resolution;
 	if (!SaveImg(strRes, nCols2, nRows2, nBands2, data2,geo,"0", "JPEG"))
 	{
 		errMsg(eISave);
@@ -783,7 +785,39 @@ bool ReadCameraFile(CString strCameraFile, vector<cameraInfo>&vecCmr)
 	fclose(pfR);
 	return true;
 }
+
+cameraInfo calCameraInfo()
+{
+	cameraInfo cmr;
+	cmr.phi = 0;
+	cmr.omg = -0.5;
+	cmr.kap = 0;
+	
+	cmr.f = 161.6; //单位pix
+	cmr.Xs = 0;
+	cmr.Ys = 0;
+	cmr.Zs = 0.4;
+	cmr.CalRotMatrixByPOK();
+	return cmr;
+}
 void main(int argc, char **argv)   //几何精纠正
+{
+	//if (argc != 4)
+	//{
+	//	cout << "parameter error: exe inFolder inPosFile outFolder" << endl;
+	//	return;
+	//}
+	GDALAllRegister();         //利用GDAL读取图片，先要进行注册  
+	CPLSetConfigOption("GDAL_FILENAME_IS_UTF8", "NO");   //设置支持中文路径
+	
+	CString strInput = "E:/2_Learning/4_Code/ImageRectify/ImageRectify/IMG_4378.JPG";
+	CString strOutput = "E:/2_Learning/4_Code/ImageRectify/ImageRectify/IMG_4378_rec.JPG";
+	cameraInfo cmr = calCameraInfo();
+	imageRectify(strInput, strOutput, cmr, 0.01, 0);
+
+}
+
+void main0(int argc, char **argv)   //几何精纠正
 {
 	if (argc != 4)
 	{

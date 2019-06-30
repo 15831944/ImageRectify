@@ -241,15 +241,14 @@ struct cameraInfo
 //}
 Point2D XYZ2Img(int nCols, int nRows, Point3D &ptXYZ, cameraInfo pos)
 {
-
 	if (pos.R[0] == InvalidValue) pos.CalRotMatrixByPOK();
 	double Xs, Ys, Zs, f;
 	Xs = pos.Xs;
 	Ys = pos.Ys;
 	Zs = pos.Zs;
 	f = pos.f;
-	double _X = ptXYZ.X;
-	double _Y = ptXYZ.Y;
+	double _X = ptXYZ.Y;
+	double _Y = ptXYZ.X;
 	double _Z = ptXYZ.Z;
 	double X_new = pos.R[0] * (_X - Xs) + pos.R[3] * (_Y - Ys) + pos.R[6] * (_Z - Zs);
 	double Y_new = pos.R[1] * (_X - Xs) + pos.R[4] * (_Y - Ys) + pos.R[7] * (_Z - Zs);
@@ -284,6 +283,6 @@ Point3D Img2XYZ(int nCols, int nRows, Point2D &ptImg, double Z, cameraInfo pos)
 		(pos.R[8] * _py + pos.R[7] * f)*(_Z - Zs);
 	double _X = (M1*B2 - M2*B1) / (A1*B2 - A2*B1);
 	double _Y = (M1*A2 - M2*A1) / (A2*B1 - A1*B2);
-	Point3D ptXYZ = Point3D(_X, _Y, Z);
+	Point3D ptXYZ = Point3D(_Y, _X, Z);
 	return ptXYZ;
 }
